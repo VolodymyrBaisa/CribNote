@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardHandler"
+            type="mvvm.bios.ua.recyclerviewdatabinding.view.CardHandler" />
+
+        <variable
+            name="cardViewModel"
+            type="mvvm.bios.ua.recyclerviewdatabinding.viewmodel.CardViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        android:onClick="@{(v) -> cardHandler.onClick(v, cardViewModel.title, cardViewModel.urlImagePreview)}"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/urlImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:imageUrl="@{cardViewModel.urlImagePreview}"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/horizontalScrollView" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="1dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/horizontalScrollView">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:lines="1"
+                android:text="@{cardViewModel.title}" />
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

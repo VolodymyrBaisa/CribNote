@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="descriptionViewModel"
+            type="mvvm.bios.ua.recyclerviewdatabinding.viewmodel.CardViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/urlImageDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/horizontalScrollView"
+            android:layout_alignParentTop="true"
+            app:imageUrl="@{descriptionViewModel.urlImagePreview}" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scrollbarSize="1dp">
+
+            <TextView
+                android:id="@+id/titleDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lines="1"
+                android:text="@{descriptionViewModel.title}"
+                android:textSize="16sp" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+</layout>
