@@ -1,6 +1,6 @@
 package mvvm.bios.ua.retrofit.api;
 
-import mvvm.bios.ua.retrofit.mvvm.model.AnimevostData;
+import mvvm.bios.ua.retrofit.mvvm.model.AnimevostDataContainer;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -10,11 +10,9 @@ import retrofit2.http.Query;
  */
 
 public interface AnimevostApi {
-   /* @GET("/animevost/api/v0.2/last?page=1&quantity=1")
-    Call<AnimevostData> getAnimevostDataFromApi();
-           /* @Query("page") String page,
-            @Query("quantity") String quantity);*/
-
-    @GET("/VolodymyrBaisa/CribNote/master/Retrofit/data.gson")
-    Call<AnimevostData> getAnimevostDataFromApi();
+    @GET("/animevost/api/v0.2/last?")
+    Call<AnimevostDataContainer> getAnimevostDataFromApi(
+            @Query("page") Integer page,
+            @Query("quantity") Integer quantity
+    );
 }

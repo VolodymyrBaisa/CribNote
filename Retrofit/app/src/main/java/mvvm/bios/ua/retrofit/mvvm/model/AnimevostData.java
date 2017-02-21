@@ -12,15 +12,7 @@ public class AnimevostData {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getUrlImagePreview() {
         return urlImagePreview;
-    }
-
-    public void setUrlImagePreview(String urlImagePreview) {
-        this.urlImagePreview = urlImagePreview;
     }
 }
