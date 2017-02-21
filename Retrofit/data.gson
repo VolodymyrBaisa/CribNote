@@ -1,5 +1,10 @@
- {
- "data": [
+{
+  "state": [
+    {
+      "status": "ok"
+    }
+  ],
+  "data": [
     {
       "screenImage": [
         "http://animevost.org/uploads/posts/2017-01/1484601792_2.jpg",
