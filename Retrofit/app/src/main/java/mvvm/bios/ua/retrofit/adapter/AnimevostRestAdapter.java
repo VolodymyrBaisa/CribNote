@@ -11,7 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class AnimevostRestAdapter {
-    private static String ANIMEVOST_URL = "https://api.animevost.org";
+    //private static String ANIMEVOST_URL = "https://api.animevost.org";
+    private static String ANIMEVOST_URL = "https://raw.githubusercontent.com/";
     private final String TAG = getClass().getSimpleName();
     private Retrofit restAdapter;
 

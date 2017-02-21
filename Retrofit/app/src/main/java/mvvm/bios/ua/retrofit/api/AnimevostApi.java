@@ -10,8 +10,11 @@ import retrofit2.http.Query;
  */
 
 public interface AnimevostApi {
-    @GET("/animevost/api/v0.2/last?page=1&quantity=1")
+   /* @GET("/animevost/api/v0.2/last?page=1&quantity=1")
     Call<AnimevostData> getAnimevostDataFromApi();
            /* @Query("page") String page,
             @Query("quantity") String quantity);*/
+
+    @GET("/VolodymyrBaisa/CribNote/master/Retrofit/data.gson")
+    Call<AnimevostData> getAnimevostDataFromApi();
 }
